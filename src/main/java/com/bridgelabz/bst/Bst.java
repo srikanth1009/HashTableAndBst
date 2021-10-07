@@ -18,7 +18,7 @@ class MyNode {
 }
 
 public class Bst {
-	
+	int size = 0;
 
 	public MyNode insert(MyNode node,int data) {
 		
@@ -36,6 +36,7 @@ public class Bst {
 
 	private MyNode createNewNode(int data) {
 		MyNode mynode = new MyNode(data);
+		size += 1;
 		return mynode;
 	}
 
@@ -47,6 +48,9 @@ public class Bst {
 		System.out.print(node.data + "->");
 		printInorder(node.right);
 		
+	}
+	public int size() {
+		return size;
 	}
 	
 	
